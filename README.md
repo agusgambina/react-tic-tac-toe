@@ -2,4 +2,4 @@
 
 ## References
 
-* [Setup Babel, Webpack and React ](https://www.youtube.com/watch?v=deyxI-6C2u4)
+* [React Tic Tac Toe Tutorial](https://reactjs.org/tutorial/tutorial.html)
