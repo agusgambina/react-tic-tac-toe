@@ -6,13 +6,11 @@ import ReactDOM from 'react-dom';
 import { expect } from 'chai';
 
 //Set up testing environment to run like a browser in the command line
-const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
-const { window } = jsdom;
+const dom = new JSDOM('<!doctype html><html><body></body></html>');
+global.window = dom.window;
+global.document = dom.window.document;
 
-global.window = window;
-global.document = window.document;
-
-const $ = jquery(window);
+const $ = jquery(global.window);
 
 // Build a 'renderComponent' helper that should render a given react class
 function renderComponent(ComponentClass) {
@@ -24,5 +22,4 @@ function renderComponent(ComponentClass) {
 //Build a helper for simulating events
 
 //Set up chai-jquery
-
 export { renderComponent, expect };
