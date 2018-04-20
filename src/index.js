@@ -1,10 +1,4 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-import Game from './components/game';
-
-ReactDOM.render(
-  <Game />,
-  document.getElementById('root')
-)
+configure({ adapter: new Adapter() });
